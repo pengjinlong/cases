@@ -1,0 +1,43 @@
+.swiper-box {
+  position: relative;
+}
+swiper {
+  position: relative;
+  height: 240px;
+}
+swiper-item {
+  width: 100%;
+  height: 100%;
+  background: rgba(233, 33, 2, 0.5);
+}
+.swiper-item-content {
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+  height: 100%;
+}
+.swiper-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.icon {
+  transform-style: preserve-3d;
+}
+.fadeIn {
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+.fadeOut {
+  opacity: 0;
+  transition: all 0.5s linear;
+}
+.text {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #febf12;
+  margin-left: 20px;
+}

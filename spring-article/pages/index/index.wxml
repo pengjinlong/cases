@@ -1,0 +1,17 @@
+  <view class="swiper-box">
+    <canvas id="canvas" type="2d" style="position: absolute;top: 0;left: 0;width: 300px; height: 200px;z-index: 99;"></canvas>
+    <image src="{{item}}" wx:for="{{background}}" class="swiper-bg {{animationStart || current === index ? 'fadeIn' : 'fadeOut'}} "></image>
+    <swiper indicator-dots="{{true}}" indicator-active-color="#fff" interval="{{3000}}" autoplay="{{true}}" circular="{{false}}" bindchange="handleChange" bindtransition="handleTransition" bindanimationfinish="handleFinish">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <view class="swiper-item-content" style="transform: translate3d({{x}}px, {{y}}px, {{z}}px);">
+            <image class="icon" src="../../images/firecrackers.png"  style="width: 90px; height: 90px;" wx:if="{{index === 0}}"></image>
+            <image class="icon" src="../../images/lantern.png" style="width: 90px; height: 90px;" wx:else></image>
+            <text class="text" wx:if="{{index === 0}}">新年快乐</text>
+            <text class="text" wx:else>大吉大利</text>
+            <!-- <image wx:else class="icon" src="../../images/lantern.png" style="width: 90px; height: 90px;" wx:else></image> -->
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
